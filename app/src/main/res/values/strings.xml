@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">MedicineDeliveryApp</string>
-    <string name="sign_up">Bạn chưa có tài khoản? <b>Đăng ký</b></string>
-    <string name="sign_in">Bạn đã có tài khoản? <b>Đăng nhập</b></string>
-    <string name="cb">Chấp nhận các <b>điều khoản</b>? </string>
-</resources>
