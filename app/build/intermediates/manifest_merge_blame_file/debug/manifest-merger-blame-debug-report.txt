@@ -1,0 +1,99 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.medicine"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml
+10
+11    <permission
+11-->[androidx.core:core:1.9.0] C:\Users\DELL\.gradle\caches\transforms-3\f5896e6a027ba92fdc7c623f875e955f\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+12        android:name="com.example.medicine.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.9.0] C:\Users\DELL\.gradle\caches\transforms-3\f5896e6a027ba92fdc7c623f875e955f\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.9.0] C:\Users\DELL\.gradle\caches\transforms-3\f5896e6a027ba92fdc7c623f875e955f\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.example.medicine.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.9.0] C:\Users\DELL\.gradle\caches\transforms-3\f5896e6a027ba92fdc7c623f875e955f\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.9.0] C:\Users\DELL\.gradle\caches\transforms-3\f5896e6a027ba92fdc7c623f875e955f\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:6:5-31:19
+18        android:allowBackup="true"
+18-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:7:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.9.0] C:\Users\DELL\.gradle\caches\transforms-3\f5896e6a027ba92fdc7c623f875e955f\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+20        android:dataExtractionRules="@xml/data_extraction_rules"
+20-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:8:9-65
+21        android:debuggable="true"
+22        android:fullBackupContent="@xml/backup_rules"
+22-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:9:9-54
+23        android:icon="@mipmap/ic_launcher"
+23-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:10:9-43
+24        android:label="@string/app_name"
+24-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:11:9-41
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:12:9-54
+26        android:supportsRtl="true"
+26-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:13:9-35
+27        android:testOnly="true"
+28        android:theme="@style/Theme.Medicine" >
+28-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:14:9-46
+29        <activity
+29-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:16:9-18:40
+30            android:name="com.example.medicine.signup"
+30-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:17:13-35
+31            android:exported="false" />
+31-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:18:13-37
+32        <activity
+32-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:19:9-21:40
+33            android:name="com.example.medicine.signin"
+33-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:20:13-35
+34            android:exported="false" />
+34-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:21:13-37
+35        <activity
+35-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:22:9-30:20
+36            android:name="com.example.medicine.product"
+36-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:23:13-36
+37            android:exported="true" >
+37-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:24:13-36
+38            <intent-filter>
+38-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:25:13-29:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:26:17-69
+39-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:26:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:28:17-77
+41-->D:\android\Group10\Group_10_Android\app\src\main\AndroidManifest.xml:28:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <provider
+45-->[androidx.emoji2:emoji2:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\5e91b023516a338285bd49f27692db4f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+46            android:name="androidx.startup.InitializationProvider"
+46-->[androidx.emoji2:emoji2:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\5e91b023516a338285bd49f27692db4f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+47            android:authorities="com.example.medicine.androidx-startup"
+47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\5e91b023516a338285bd49f27692db4f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+48            android:exported="false" >
+48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\5e91b023516a338285bd49f27692db4f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+49            <meta-data
+49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\5e91b023516a338285bd49f27692db4f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+50                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+50-->[androidx.emoji2:emoji2:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\5e91b023516a338285bd49f27692db4f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+51                android:value="androidx.startup" />
+51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\5e91b023516a338285bd49f27692db4f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+52            <meta-data
+52-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\DELL\.gradle\caches\transforms-3\60d66295239e7383db0bc717e0e4f288\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+53                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+53-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\DELL\.gradle\caches\transforms-3\60d66295239e7383db0bc717e0e4f288\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+54                android:value="androidx.startup" />
+54-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\DELL\.gradle\caches\transforms-3\60d66295239e7383db0bc717e0e4f288\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+55        </provider>
+56    </application>
+57
+58</manifest>

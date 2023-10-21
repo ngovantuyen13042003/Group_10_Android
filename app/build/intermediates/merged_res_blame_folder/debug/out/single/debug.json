@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/xml_backup_rules.xml.flat",
+        "source": "com.example.medicine.app-main-27:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_user.png.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/user.png"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/layout_product.xml.flat",
+        "source": "com.example.medicine.app-main-27:/layout/product.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.medicine.app-main-27:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_custom_toolbar.xml.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/custom_toolbar.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.medicine.app-pngs-20:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_img_medicine.jpg.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/img_medicine.jpg"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_custom_btn.xml.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/custom_btn.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_icon_cart_size.xml.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/icon_cart_size.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_search_icon.png.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/search_icon.png"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_custom_edtxt.xml.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/custom_edtxt.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/layout_activity_signin.xml.flat",
+        "source": "com.example.medicine.app-main-27:/layout/activity_signin.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_icon_size.xml.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/icon_size.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_menu_icon.png.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/menu_icon.png"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/layout_activity_signup.xml.flat",
+        "source": "com.example.medicine.app-main-27:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.medicine.app-main-27:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.medicine.app-main-27:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.medicine.app-merged_res-25:/drawable-v24_cart_icon.png.flat",
+        "source": "com.example.medicine.app-main-27:/drawable-v24/cart_icon.png"
+    }
+]
