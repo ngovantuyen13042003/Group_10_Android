@@ -17,10 +17,13 @@
             android:name=".signup"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".product_detail"
             android:exported="false" />
         <activity
             android:name=".signin"
+            android:exported="false" />
+        <activity
+            android:name=".product"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

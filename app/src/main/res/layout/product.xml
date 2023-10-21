@@ -50,15 +50,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
                 android:background="#ccc">
                 <androidx.cardview.widget.CardView
                     android:id="@+id/productCard"
-                    android:layout_width="190dp"
+                    android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="4dp"
                     app:cardElevation="4dp"
                     app:cardUseCompatPadding="true"
-                    android:layout_margin="8dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
                     tools:ignore="MissingClass">
 
                     <LinearLayout
@@ -127,12 +130,13 @@
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:id="@+id/productCard2"
-                    android:layout_width="190dp"
+                    android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="4dp"
                     app:cardElevation="4dp"
+                    android:layout_weight="1"
                     app:cardUseCompatPadding="true"
-                    android:layout_margin="8dp"
+                    android:layout_margin="5dp"
                     tools:ignore="MissingClass">
 
                     <LinearLayout
