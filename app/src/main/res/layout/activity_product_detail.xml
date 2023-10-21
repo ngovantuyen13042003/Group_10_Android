@@ -62,7 +62,6 @@
                     android:layout_height="25dp"
                     android:background="@drawable/back_product"
                     android:layout_gravity="left"
-
                     android:padding="10dp" />
 
                 <androidx.cardview.widget.CardView

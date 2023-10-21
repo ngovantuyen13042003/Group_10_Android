@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class product_detail extends AppCompatActivity {
     private int quantity = 0;
     private TextView tvQuantity, back;
-
+    TextView cart1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,16 @@ public class product_detail extends AppCompatActivity {
         Button btnDecrease = findViewById(R.id.btnDecrease);
         Button btnIncrease = findViewById(R.id.btnIncrease);
         back = findViewById(R.id.back_product);
+
+
+        cart1 = findViewById(R.id.cart);
+        cart1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product_detail.this, cart.class));
+            }
+        });
+
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
