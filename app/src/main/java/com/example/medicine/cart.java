@@ -17,9 +17,7 @@ public class cart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
-        ImageView imageView = findViewById(R.id.cart);
-        imageView.getLayoutParams().width = 50; // Chiều rộng
-        imageView.getLayoutParams().height = 50; // Chiều cao
+
         tvQuantity = findViewById(R.id.tvQuantity);
         Button btnDecrease = findViewById(R.id.btnDecrease);
         Button btnIncrease = findViewById(R.id.btnIncrease);

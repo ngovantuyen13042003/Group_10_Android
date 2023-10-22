@@ -15,8 +15,8 @@ public class product extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product);
-        detail1 = findViewById(R.id.productImage);
-        detail2 = findViewById(R.id.productImage2);
+        detail1 = findViewById(R.id.productImage1);
+
         cart1 = findViewById(R.id.cart);
 
         cart1.setOnClickListener(new View.OnClickListener() {
@@ -33,11 +33,5 @@ public class product extends AppCompatActivity {
             }
         });
 
-        detail2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(product.this, product_detail.class));
-            }
-        });
     }
 }
