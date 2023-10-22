@@ -66,30 +66,32 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         />
-
     <TextView
         android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tên đăng nhập"
+        android:text="Nhập lại Mật khẩu"
         android:textColor="#1E90FF"
         android:textStyle="bold"
         android:textSize="20dp"
         android:layout_marginLeft="20dp"
         />
     <EditText
-        android:id="@+id/txt_username"
+        android:id="@+id/edt_passwordConfirm"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:hint="Nhập tên đăng nhập"
+        android:hint="Nhập lại mật khẩu"
         android:textStyle="bold"
         android:textColorHint="#AFACAC"
         android:textSize="15dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:background="@drawable/custom_edtxt"
         android:backgroundTint="#D0DCD8"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         />
+
+
 
     <CheckBox
         android:layout_marginTop="15dp"
@@ -114,7 +116,7 @@
         android:layout_marginRight="20dp"
         ></Button>
     <TextView
-        android:id="@+id/lk"
+        android:id="@+id/lksignin"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
