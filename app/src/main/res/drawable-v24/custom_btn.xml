@@ -7,5 +7,5 @@
         android:bottom="10dp"
         android:top="10dp">
     </padding>
-    <corners android:radius="10dp"></corners>
+    <corners android:radius="30dp"></corners>
 </shape>

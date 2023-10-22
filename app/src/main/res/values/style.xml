@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyCustomTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">18sp</item>
+
+    </style>
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Thông tin khách hàng"
+            android:text="Thông tin giao hàng"
             android:textSize="23sp"
             android:textColor="#050505"
             android:layout_gravity="center"
@@ -54,15 +54,19 @@
             android:layout_weight="2"
            />
         <Button
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
             android:text="Thay đổi"
-            android:textSize="20sp"
+            android:textSize="13sp"
             android:background="@drawable/custom_btn"
-            android:textColor="#000000"
+            android:textColor="@color/chudao"
             android:textStyle="bold"
             android:layout_weight="1"
             android:layout_gravity="right"
+           android:layout_marginRight="5dp"
+
+
+
             />
     </LinearLayout>
 
@@ -78,34 +82,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ngô Văn tuyến | +8412345678"
-            android:textSize="23sp"
-            android:textColor="#050505"
+            android:textSize="15sp"
+            android:textColor="#6C6969"
             android:layout_gravity="left"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thanh khê Tây, Thanh Khê, Đà Nẵng, Việt Nam"
-            android:textSize="23sp"
-            android:textColor="#050505"
+            android:textSize="18sp"
+            android:textColor="#676565"
             android:layout_gravity="left"
             />
     </LinearLayout>
 
 <!--    product-->
     <LinearLayout
-        android:background="@drawable/custom_boder_txt"
+        android:background="@android:color/system_accent2_100"
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        >
+        tools:ignore="NewApi"
+        tools:targetApi="s">
         <CheckBox
+
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_marginTop="37dp"
           />
 
         <ImageView
@@ -141,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Miễn phí đổi trả trong 2h"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textColor="#050505"
                 android:layout_gravity="left"
                 android:background="@drawable/custom_boder_txt"
@@ -168,8 +174,8 @@
 
                 <Button
                     android:id="@+id/btnDecrease"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:text="-" />
 
@@ -182,8 +188,8 @@
 
                 <Button
                     android:id="@+id/btnIncrease"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:text="+" />
             </LinearLayout>
         </LinearLayout>
@@ -193,18 +199,18 @@
     </LinearLayout>
     <!--    product-->
     <LinearLayout
-        android:background="@drawable/custom_boder_txt"
+        android:background="@android:color/system_accent2_100"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        >
+        tools:targetApi="s">
         <CheckBox
             android:id="@+id/checkBox1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+           android:layout_marginTop="37dp"
             />
 
         <ImageView
@@ -240,7 +246,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Miễn phí đổi trả trong 2h"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textColor="#050505"
                 android:layout_gravity="left"
                 android:background="@drawable/custom_boder_txt"
@@ -267,8 +273,8 @@
 
                 <Button
                     android:id="@+id/btnDecrease1"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:text="-" />
 
@@ -281,8 +287,8 @@
 
                 <Button
                     android:id="@+id/btnIncrease1"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:text="+" />
             </LinearLayout>
         </LinearLayout>
@@ -296,7 +302,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:weightSum="2"
+            android:weightSum="5"
             android:gravity="bottom"
             >
 <!--            discount-->
@@ -309,8 +315,8 @@
                 android:layout_gravity="bottom"
                 >
                 <TextView
-                    android:textSize="20sp"
-                    android:textColor="#494949"
+                    android:textSize="18sp"
+                    android:textColor="@color/chudao"
                     android:textStyle="bold"
                     android:text="Mã giảm giá"
                     android:layout_width="wrap_content"
@@ -323,8 +329,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nhập hoặc chọn mã >"
-                    android:textSize="20sp"
-                    android:textColor="#494949"
+                    android:textSize="18sp"
+                    android:textColor="@color/chudao"
                     android:textStyle="bold"
                     android:layout_gravity="bottom"
                     android:gravity="right"
@@ -347,7 +353,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="tất cả"
+                    android:text="Tất cả"
                     android:layout_weight="1"
                     />
 
@@ -370,13 +376,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="MUA NGAY"
-                    android:textSize="20sp"
-                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textColor="#FFFFFF"
                     android:textStyle="bold"
                     android:background="@drawable/custom_btn"
                     android:backgroundTint="#1E90FF"
-                    android:layout_gravity="center"
-                    android:gravity="right"
+
+                    android:gravity="center"
+
                     />
             </LinearLayout>
 
