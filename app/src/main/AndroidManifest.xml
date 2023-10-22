@@ -17,9 +17,15 @@
             android:name=".list_product_admin"
             android:exported="false" />
         <activity
+            android:name=".product"
+            android:exported="false" />
+
+
+        <activity
             android:name=".cart"
             android:exported="false" />
         <activity
+
             android:name=".signup"
             android:exported="false" />
         <activity
@@ -29,7 +35,7 @@
             android:name=".signin"
             android:exported="false" />
         <activity
-            android:name=".product"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
