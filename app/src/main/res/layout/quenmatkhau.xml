@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/irishgrover"
+            android:gravity="center"
+            android:text="Medicine"
+            android:textAlignment="center"
+            android:textColor="@color/chudao"
+            android:textSize="80sp"
+
+
+            />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUÊN MẬT KHẨU"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="70dp"
+        android:textStyle="bold"
+
+        android:textSize="30sp"
+        android:textColor="@color/black"
+
+        />
+
+    </LinearLayout>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="Nhập Email"
+        android:textSize="18sp"
+        android:textColor="@color/chudao"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+
+        />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_edittext_background"
+        android:inputType="textEmailAddress"
+       android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Email"
+        android:paddingStart="30dp"
+        android:autofillHints="emailAddress"
+        android:textColorHint="@color/material_dynamic_neutral70"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rounded_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lấy lại mật khẩu"
+
+        android:background="@drawable/rounded_button_background"
+        android:backgroundTint="@null"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        />
+
+
+</LinearLayout>
