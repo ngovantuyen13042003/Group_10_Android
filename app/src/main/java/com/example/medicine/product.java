@@ -16,6 +16,7 @@ public class product extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product);
         detail1 = findViewById(R.id.productImage1);
+
         cart1 = findViewById(R.id.cart);
 
         cart1.setOnClickListener(new View.OnClickListener() {

@@ -7,7 +7,10 @@
         <entry key="..\:/android/Group10/Group_10_Android/app/src/main/res/drawable/custom_boder_txt.xml" value="0.136" />
         <entry key="..\:/android/Group10/Group_10_Android/app/src/main/res/layout/activity_account.xml" value="0.16354166666666667" />
         <entry key="..\:/android/Group10/Group_10_Android/app/src/main/res/layout/activity_cart.xml" value="0.14666666666666667" />
+<<<<<<< HEAD
         <entry key="..\:/android/Group10/Group_10_Android/app/src/main/res/layout/activity_list_product_admin.xml" value="0.22" />
+=======
+>>>>>>> 00c5b871a8e660aae17624c46736abf4638b380b
         <entry key="..\:/android/Group10/Group_10_Android/app/src/main/res/layout/activity_main.xml" value="0.16354166666666667" />
         <entry key="..\:/android/Group10/Group_10_Android/app/src/main/res/layout/activity_product_detail.xml" value="0.22" />
         <entry key="..\:/android/Group10/Group_10_Android/app/src/main/res/layout/activity_signin.xml" value="0.17552083333333332" />

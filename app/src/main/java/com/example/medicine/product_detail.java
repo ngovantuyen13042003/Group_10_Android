@@ -13,11 +13,15 @@ import androidx.appcompat.app.AppCompatActivity;
 public class product_detail extends AppCompatActivity {
     private int quantity = 0;
     private TextView tvQuantity, back;
+
     ImageView cart1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
+
+
 
 
         tvQuantity = findViewById(R.id.tvQuantity);
