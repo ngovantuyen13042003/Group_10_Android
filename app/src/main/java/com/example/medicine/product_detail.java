@@ -13,21 +13,21 @@ import androidx.appcompat.app.AppCompatActivity;
 public class product_detail extends AppCompatActivity {
     private int quantity = 0;
     private TextView tvQuantity, back;
-    TextView cart1;
+    ImageView cart1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
-        ImageView imageView = findViewById(R.id.cart);
-        imageView.getLayoutParams().width = 50; // Chiều rộng
-        imageView.getLayoutParams().height = 50; // Chiều cao
+
+
         tvQuantity = findViewById(R.id.tvQuantity);
         Button btnDecrease = findViewById(R.id.btnDecrease);
         Button btnIncrease = findViewById(R.id.btnIncrease);
         back = findViewById(R.id.back_product);
 
 
-        cart1 = findViewById(R.id.cart);
+        cart1 = findViewById(R.id.cart_detail);
+
         cart1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
