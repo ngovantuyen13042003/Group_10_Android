@@ -26,7 +26,15 @@
         <activity
             android:name=".product"
             android:exported="false" />
-
+        <activity
+            android:name=".acccount"
+            android:exported="true" />
+        <activity
+            android:name=".accountsetting"
+            android:exported="false" />
+        <activity
+            android:name=".address"
+            android:exported="false" />
 
         <activity
             android:name=".cart"
