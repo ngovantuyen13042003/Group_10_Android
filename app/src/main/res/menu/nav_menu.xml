@@ -25,4 +25,10 @@
 
 
   </group>
+
+    <item android:id="@+id/leave"
+        android:title="Đăng Xuất"
+        android:icon="@drawable/icon_leave"/>
+    <item android:id="@+id/ver"
+        android:title="Version: 11.9.0(119011)"/>
 </menu>
