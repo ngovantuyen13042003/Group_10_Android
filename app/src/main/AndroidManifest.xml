@@ -17,6 +17,12 @@
             android:name=".Ho_So_Y_Te"
             android:exported="true"/>
         <activity
+            android:name=".themsanpham"
+            android:exported="true"/>
+        <activity
+            android:name=".capnhatsanpham"
+            android:exported="true"/>
+        <activity
             android:name=".HoSoYTeSua"
             android:exported="false"/>
 
