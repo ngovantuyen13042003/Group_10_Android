@@ -14,14 +14,20 @@
         android:theme="@style/Theme.Medicine"
         tools:targetApi="31">
         <activity
-            android:name=".Ho_So_Y_Te"
+            android:name=".trangchu"
             android:exported="true"/>
+        <activity
+            android:name=".Ho_So_Y_Te"
+            android:exported="false"/>
+        <activity
+            android:name=".tin_nhan"
+            android:exported="false" />
         <activity
             android:name=".themsanpham"
-            android:exported="true"/>
+            android:exported="false"/>
         <activity
             android:name=".capnhatsanpham"
-            android:exported="true"/>
+            android:exported="false"/>
         <activity
             android:name=".HoSoYTeSua"
             android:exported="false"/>
@@ -34,7 +40,7 @@
             android:exported="false" />
         <activity
             android:name=".acccount"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".accountsetting"
             android:exported="false" />
@@ -55,6 +61,9 @@
         <activity
             android:name=".signin"
             android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".Home"
             android:exported="true">
