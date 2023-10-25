@@ -34,3 +34,4 @@ public class PagerAdapter_sy extends FragmentPagerAdapter {
         return tabsNumber;
     }
 }
+
