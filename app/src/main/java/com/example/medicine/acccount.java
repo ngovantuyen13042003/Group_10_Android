@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -23,7 +24,7 @@ public class acccount extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
-    ImageView imvaccountsetting, imvhosoyte,imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan;
+    ImageView imvaccountsetting, imvhosoyte,imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan,pf;
     TextView saveaddress;
     ImageButton btngiohang;
     @Override
@@ -48,7 +49,11 @@ public class acccount extends AppCompatActivity {
         imvTinNhan=findViewById(R.id.imvtinnhan);
         imvTaiKhoan=findViewById(R.id.imvtaikhoan);
 
+        pf = findViewById(R.id.author_profile);
+
         btngiohang=findViewById(R.id.iconButton);
+
+
 
 //        set onclick cho caidattaikhoan
         imvaccountsetting = findViewById(R.id.imvaccountsetting);
@@ -105,6 +110,13 @@ public class acccount extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(acccount.this, cart.class));
+            }
+        });
+
+        pf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(acccount.this, profile.class));
             }
         });
 

@@ -14,8 +14,8 @@
         android:theme="@style/Theme.Medicine"
         tools:targetApi="31">
         <activity
-            android:name=".trangchu"
-            android:exported="true"/>
+            android:name=".profile"
+            android:exported="false"/>
         <activity
             android:name=".Ho_So_Y_Te"
             android:exported="false"/>
