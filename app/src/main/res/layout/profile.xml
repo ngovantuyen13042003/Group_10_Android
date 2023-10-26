@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+   android:orientation="vertical"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/back_profile"
+            android:layout_marginLeft="20dp"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:background="@drawable/back_product"
+            android:layout_gravity="left"
+            android:layout_marginBottom="100dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="30dp" />
+
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:padding="20dp"
+       >
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="GROUP 10"
+           android:gravity="center"
+           android:textSize="40sp"
+           android:textColor="#1E90FF"
+           android:textStyle="bold"
+           android:layout_marginBottom="30dp"
+           >
+
+       </TextView>
+
+       <TextView
+           android:paddingTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Ngô Văn Tuyến _ 21115053120261"
+           android:textSize="20sp"
+           android:textColor="#1E90FF"
+           android:textStyle="bold"
+           >
+       </TextView>
+       <TextView
+           android:paddingTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Nguyễn Nhật Tân _ 21115053120244"
+           android:textSize="20sp"
+           android:textColor="#1E90FF"
+           android:textStyle="bold"
+           >
+       </TextView><TextView
+       android:paddingTop="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Lê Văn Sỹ _ 21115053120243"
+       android:textSize="20sp"
+       android:textColor="#1E90FF"
+       android:textStyle="bold"
+       >
+   </TextView>
+       <TextView
+           android:paddingTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Lưu Bảo Quốc _ 21115053120236"
+           android:textSize="20sp"
+           android:textColor="#1E90FF"
+           android:textStyle="bold"
+           >
+       </TextView>
+       <TextView
+           android:paddingTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Nguyễn Thị Cảm Ly _ 21115053120226"
+           android:textSize="19sp"
+           android:textColor="#1E90FF"
+           android:textStyle="bold"
+           >
+       </TextView>
+
+   </LinearLayout>
+</LinearLayout>

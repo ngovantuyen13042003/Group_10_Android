@@ -8,6 +8,7 @@
     tools:context=".product_detail"
     tools:ignore="DuplicateIds">
     <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drwproductdetail"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -22,11 +23,12 @@
                 >
 
                 <ImageView
+                    android:id="@+id/imvbannerdetail"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginLeft="10dp"
-                    android:src="@drawable/menu_icon"
+                    android:src="@drawable/ic_menu"
                     />
                 <ImageView
                     android:layout_width="30dp"
@@ -204,6 +206,16 @@
                 />
 
         </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/nav_menu"></com.google.android.material.navigation.NavigationView>
+
 
     </androidx.drawerlayout.widget.DrawerLayout>
 
