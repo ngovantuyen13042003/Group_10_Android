@@ -1,0 +1,21 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Trang "Home" -->
+    <item android:drawable="@drawable/color_buttom" android:state_checked="true" />
+    <item android:drawable="@drawable/home" />
+
+    <!-- Trang "Product" -->
+    <item android:drawable="@drawable/color_buttom" android:state_checked="true" />
+    <item android:drawable="@drawable/product" />
+
+    <!-- Trang "DonHang" -->
+    <item android:drawable="@drawable/color_buttom" android:state_checked="true" />
+    <item android:drawable="@drawable/donhang" />
+
+    <!-- Trang "Chat" -->
+    <item android:drawable="@drawable/color_buttom" android:state_checked="true" />
+    <item android:drawable="@drawable/chat" />
+
+    <!-- Trang "Account" -->
+    <item android:drawable="@drawable/color_buttom" android:state_checked="true" />
+    <item android:drawable="@drawable/account" />
+</selector>

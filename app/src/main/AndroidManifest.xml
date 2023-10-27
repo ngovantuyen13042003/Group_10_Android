@@ -14,12 +14,39 @@
         android:theme="@style/Theme.Medicine"
         tools:targetApi="31">
         <activity
+            android:name=".profile"
+            android:exported="false"/>
+        <activity
+            android:name=".Ho_So_Y_Te"
+            android:exported="false"/>
+        <activity
+            android:name=".tin_nhan"
+            android:exported="false" />
+        <activity
+            android:name=".themsanpham"
+            android:exported="false"/>
+        <activity
+            android:name=".capnhatsanpham"
+            android:exported="false"/>
+        <activity
+            android:name=".HoSoYTeSua"
+            android:exported="false"/>
+
+        <activity
             android:name=".list_product_admin"
             android:exported="false" />
         <activity
             android:name=".product"
             android:exported="false" />
-
+        <activity
+            android:name=".acccount"
+            android:exported="false" />
+        <activity
+            android:name=".accountsetting"
+            android:exported="false" />
+        <activity
+            android:name=".address"
+            android:exported="false" />
 
         <activity
             android:name=".cart"
@@ -36,6 +63,9 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Home"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

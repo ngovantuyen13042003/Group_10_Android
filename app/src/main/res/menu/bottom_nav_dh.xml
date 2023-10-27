@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  android:id="@+id/home"
+        android:title="@string/action_home"
+        android:icon="@drawable/home"
+        />
+
+    <item  android:id="@+id/product"
+        android:title="@string/action_product"
+        android:icon="@drawable/grid"/>
+
+
+    <item  android:id="@+id/donhang"
+        android:title="@string/action_donhang"
+        android:tint="@color/chudao"
+        android:icon="@drawable/dh"/>
+
+
+    <item  android:id="@+id/chat"
+        android:title="@string/action_chat"
+        android:icon="@drawable/chat"/>
+
+    <item  android:id="@+id/account"
+        android:title="@string/action_account"
+        android:icon="@drawable/account"/>
+</menu>
+    <!-- home-->
