@@ -15,43 +15,11 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:outlineSpotShadowColor="#ccc"
-                >
 
-                <ImageView
-                    android:id="@+id/imvbannerdetail"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_menu"
-                    />
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:src="@drawable/cart_icon"
-                    android:layout_marginRight="10dp"
-                    />
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/custom_edtxt"
-                    android:hint="Search"
-                    android:drawableRight="@drawable/icon_size"
-                    android:drawablePadding="8dp"
-
-                    />
-            </androidx.appcompat.widget.Toolbar>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:background="#fff">
@@ -60,165 +28,286 @@
                 <TextView
                     android:id="@+id/back_product"
                     android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
                     android:layout_width="50dp"
                     android:layout_height="25dp"
                     android:background="@drawable/back_product"
                     android:layout_gravity="left"
                     android:padding="10dp" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/productCard"
-                    android:layout_width="350dp"
-                    android:layout_height="match_parent"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="4dp"
-                    app:cardUseCompatPadding="true"
-                    android:layout_margin="8dp"
-                    android:gravity="center"
-                    tools:ignore="MissingClass">
-
-                    <LinearLayout
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/productCard"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        tools:ignore="MissingClass">
 
-                        <ImageView
-                            android:id="@+id/img_product_detail"
-                            android:layout_width="match_parent"
-                            android:layout_height="200dp"
-                            android:layout_weight="1"
-                            android:maxHeight="50dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/img_medicine" />
-
-                        <TextView
-                            android:id="@+id/productTitle"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:text="Product Name"
-                            android:textSize="25sp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            />
-
-                        <TextView
-                            android:id="@+id/productDescription"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:textSize="20sp"
-                            android:gravity="center"
-
-                            android:text="Product Description" />
-
-                        <TextView
-                            android:id="@+id/productPrice"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:text="Price: $10.99"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:gravity="center" />
-
-                        <!--             choose amount product           -->
                         <LinearLayout
-                            xmlns:android="http://schemas.android.com/apk/res/android"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            android:gravity="center"
-                            android:padding="16dp">
+                            android:padding="10dp"
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/btnDecrease"
-                                android:layout_width="40dp"
-                                android:layout_height="wrap_content"
-                                android:text="-" />
+                            <ImageView
+                                android:id="@+id/img_product_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_weight="1"
+                                android:maxHeight="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_medicine" />
 
                             <TextView
-                                android:id="@+id/tvQuantity"
-                                android:padding="18sp"
+                                android:id="@+id/productTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Paracetamol"
+                                android:textSize="35sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                />
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="1" />
+                                android:orientation="horizontal">
 
-                            <Button
-                                android:id="@+id/btnIncrease"
-                                android:layout_width="40dp"
+                                <TextView
+                                    android:id="@+id/productTitle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Danh mục:"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/productTitle2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Thuốc giảm đau"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="+" />
-                        </LinearLayout>
+                                android:orientation="horizontal">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            android:gravity="center"
+                                <TextView
+                                    android:id="@+id/productTitle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Thuốc cần kê toa:"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
 
-                            >
-                            <ImageView
-
-                                android:id="@+id/cart_detail"
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:gravity="center"
-                                android:layout_marginRight="1dp"
-                                android:src="@drawable/icon_cart_size"
-                                android:layout_gravity="center"
-
-
-                                />
-                            <Button
-                                android:layout_marginLeft="25dp"
-                                android:gravity="center"
-                                android:layout_width="150dp"
+                                <TextView
+                                    android:id="@+id/productTitle2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Không"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/custom_btn"
-                                android:backgroundTint="#1E90FF"
-                                android:text="mua ngay"
-                                android:textSize="15sp"
-                                android:textColor="#fff"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/productTitle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Thương hiệu:"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/productTitle2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="ta Hospital"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/productTitle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Nhà sản xuất:"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/productTitle2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="CTY CP TẬP ĐOÀN MERAP (Việt Nam)"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/productPrice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Price: $10.99"
+                                android:textSize="25sp"
+                                android:textStyle="bold"
+                                android:gravity="center" />
+
+                            <!--             choose amount product           -->
+                            <LinearLayout
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:padding="16dp">
+
+                                <Button
+                                    android:id="@+id/btnDecrease"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="-" />
+
+                                <TextView
+                                    android:id="@+id/tvQuantity"
+                                    android:padding="18sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1" />
+
+                                <Button
+                                    android:id="@+id/btnIncrease"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="+" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+
+                                >
+                                <ImageView
+
+                                    android:id="@+id/cart_detail"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:gravity="center"
+                                    android:layout_marginRight="1dp"
+                                    android:src="@drawable/icon_cart_size"
+                                    android:layout_gravity="center"
+
+
+                                    />
+                                <Button
+                                    android:id="@+id/btn_buy"
+                                    android:layout_marginLeft="25dp"
+                                    android:gravity="center"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/custom_btn"
+                                    android:backgroundTint="#1E90FF"
+                                    android:text="mua ngay"
+                                    android:textSize="15sp"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"
+                                    />
+                            </LinearLayout>
+
+                            <TextView  android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#000000"
+                                android:layout_marginTop="20dp"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/productTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Chức năng"
+                                android:textSize="25sp"
                                 android:textStyle="bold"
                                 />
+                            <TextView
+                                android:id="@+id/productDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="20sp"
+
+
+                                android:text="Thuốc paracetamol thường được sử dụng trong các trường hợp cần giảm đau, hạ sốt. Đây là thuốc có thể được bác sĩ kê đơn hoặc không kê đơn, mọi người có thể tự mua về dùng theo hướng dẫn của nhà sản xuất. Nắm được những thông tin cơ bản về thuốc, đặc biệt là cách dùng và liều dùng paracetamol, sẽ giúp bạn có thể sử dụng thuốc hiệu quả, an toàn, không để lại tác dụng phụ không mong muốn." />
+
+                            <TextView
+                                android:id="@+id/productTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Thông tin sản phẩm"
+                                android:textSize="25sp"
+                                android:textStyle="bold"
+                                />
+
+
+                            <TextView
+                                android:id="@+id/productDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="20sp"
+                                android:text="- Người lớn: 1-2 viên/liều"
+                                />
+                            <TextView
+                                android:id="@+id/productDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="20sp"
+                                android:text="- Trẻ em"
+                                />
+
+                            <TextView
+                                android:id="@+id/productDescription"
+                                android:layout_width="368dp"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="+ Trẻ em sơ sinh: 10-15mg/kg"
+                                android:textSize="20sp" />
+                            <TextView
+                                android:id="@+id/productDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="20sp"
+                                android:text="+ Trẻ em lớn hơn: 15-30mg/kg"/>
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.core.widget.NestedScrollView>
+
             </LinearLayout>
-
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:layout_marginTop="240dp"
-                android:id="@+id/bottom1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:itemActiveIndicatorStyle="@color/white"
-                app:itemBackground="@color/white"
-                app:itemIconTint="@drawable/color_buttom"
-                app:itemTextColor="@drawable/color_buttom"
-                app:labelVisibilityMode="labeled"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:menu="@menu/bottom_nav"
-                android:layout_gravity="bottom"
-
-                />
-
         </LinearLayout>
-
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/navigationdetail"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            app:headerLayout="@layout/nav_header"
-            app:menu="@menu/nav_menu"></com.google.android.material.navigation.NavigationView>
-
-
     </androidx.drawerlayout.widget.DrawerLayout>
-
-
-        />
 </LinearLayout>
