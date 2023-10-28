@@ -88,10 +88,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lấy lại mật khẩu"
-
         android:background="@drawable/rounded_button_background"
         android:backgroundTint="@null"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textColor="@color/white"

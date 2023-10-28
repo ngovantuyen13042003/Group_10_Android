@@ -3,6 +3,7 @@ package com.example.medicine;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
      ViewPager pager;
      TabLayout tabLayout;
      TabItem dxlItem,historyItem;
+     ImageButton cart_order;
 
      PagerAdapter adapter;
     ImageView imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar=findViewById(R.id.mtoolbar);
         setSupportActionBar(toolbar);
-
+        cart_order = findViewById(R.id.cart_order);
         pager=findViewById(R.id.mviewpager);
         tabLayout=findViewById(R.id.mtablayout);
         dxlItem=findViewById(R.id.tabDangxuly);
@@ -78,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
 
            }
        });
+
+        cart_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, cart.class));
+            }
+        });
+
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         imvHome.setOnClickListener(new View.OnClickListener() {
             @Override
