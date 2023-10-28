@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -24,7 +25,9 @@ public class acccount extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
-    ImageView imvaccountsetting, imvhosoyte,imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan,pf;
+    ImageView imvaccountsetting, imvhosoyte,imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan;
+    RelativeLayout layoutHosoyte,LayoutAuthor,LayoutAdmin;
+    LinearLayout layoutAddress;
     TextView saveaddress;
     ImageButton btngiohang;
     @Override
@@ -45,11 +48,14 @@ public class acccount extends AppCompatActivity {
         toggle.syncState();
         imvHome=findViewById(R.id.imvhome);
         imvProduct=findViewById(R.id.imvproduct);
-        imvDonHang=findViewById(R.id.imvdonhang);
+        imvDonHang=findViewById(R.id.imvdonhangacount);
         imvTinNhan=findViewById(R.id.imvtinnhan);
         imvTaiKhoan=findViewById(R.id.imvtaikhoan);
 
-        pf = findViewById(R.id.author_profile);
+        layoutHosoyte=findViewById(R.id.hosoyteLayout);
+        LayoutAuthor=findViewById(R.id.authorLayout);
+        layoutAddress=findViewById(R.id.addressLayout);
+        LayoutAdmin=findViewById(R.id.adminLayout);
 
         btngiohang=findViewById(R.id.iconButton);
 
@@ -63,14 +69,13 @@ public class acccount extends AppCompatActivity {
                 startActivity(new Intent(acccount.this, accountsetting.class));
             }
         });
-        saveaddress = findViewById(R.id.imvsaveaddress);
-        saveaddress.setOnClickListener(new View.OnClickListener() {
+        layoutAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(acccount.this, address.class));
             }
         });
-        imvhosoyte.setOnClickListener(new View.OnClickListener() {
+        layoutHosoyte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(acccount.this, Ho_So_Y_Te.class));
@@ -113,12 +118,19 @@ public class acccount extends AppCompatActivity {
             }
         });
 
-        pf.setOnClickListener(new View.OnClickListener() {
+        LayoutAuthor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(acccount.this, profile.class));
             }
         });
+        LayoutAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(acccount.this, list_product_admin.class));
+            }
+        });
+
 
 
 //        BottomNavigationView bottomNavigation = findViewById(R.id.bottom_acc);

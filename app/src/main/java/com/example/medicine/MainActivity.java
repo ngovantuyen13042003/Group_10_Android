@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
      TabItem dxlItem,historyItem;
      ImageButton cart_order;
 
+
      PagerAdapter adapter;
     ImageView imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan;
 
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         imvDonHang=findViewById(R.id.imvdonhang);
         imvTinNhan=findViewById(R.id.imvtinnhan);
         imvTaiKhoan=findViewById(R.id.imvtaikhoan);
+
 
         drawerLayout=findViewById(R.id.mdrawer);
         navigationView=findViewById(R.id.mna_view);
