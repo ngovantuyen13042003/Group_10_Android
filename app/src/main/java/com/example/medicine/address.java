@@ -21,7 +21,7 @@ public class address extends AppCompatActivity {
         imvback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(address.this, acccount.class));
+                startActivity(new Intent(address.this, cart.class));
             }
         });
         ListView listView= findViewById(R.id.list_address);
