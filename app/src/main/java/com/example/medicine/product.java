@@ -56,6 +56,15 @@ public class product extends AppCompatActivity {
         imvTinNhan=findViewById(R.id.imvtinnhan);
         imvTaiKhoan=findViewById(R.id.imvtaikhoan);
 
+        btn_mua1 = findViewById(R.id.btn_mua1);
+        btn_mua2 = findViewById(R.id.btn_mua2);
+        btn_mua3 = findViewById(R.id.btn_mua3);
+        btn_mua4 = findViewById(R.id.btn_mua4);
+        btn_mua5 = findViewById(R.id.btn_mua5);
+        btn_mua6 = findViewById(R.id.btn_mua6);
+        btn_mua7 = findViewById(R.id.btn_mua7);
+        btn_mua8 = findViewById(R.id.btn_mua8);
+
         giohang=findViewById(R.id.imvgiohang);
         cart1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,63 +176,55 @@ public class product extends AppCompatActivity {
             }
         });
 
-//        btn_mua1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(product.this, cart.class));
-//            }
-//        });
-//
-//        btn_mua2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(product.this, cart.class));
-//            }
-//        });
-//        btn_mua3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(product.this, signin.class));
-//            }
-//        });
-//        btn_mua4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(product.this, signin.class));
-//            }
-//        });
-//        btn_mua5.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(product.this, signin.class));
-//            }
-//        });
-//        btn_mua6.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(product.this, signin.class));
-//            }
-//        });
-//        btn_mua7.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(product.this, signin.class));
-//            }
-//        });
-//        btn_mua8.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(product.this, signin.class));
-//            }
-//        });
+        btn_mua1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, cart.class));
+            }
+        });
 
-
-
-
-
-
-
-
+        btn_mua2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, cart.class));
+            }
+        });
+        btn_mua3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, cart.class));
+            }
+        });
+        btn_mua4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, cart.class));
+            }
+        });
+        btn_mua5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, cart.class));
+            }
+        });
+        btn_mua6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, cart.class));
+            }
+        });
+        btn_mua7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, cart.class));
+            }
+        });
+        btn_mua8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, cart.class));
+            }
+        });
 
         imvHome.setOnClickListener(new View.OnClickListener() {
             @Override
