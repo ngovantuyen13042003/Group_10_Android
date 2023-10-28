@@ -3,6 +3,7 @@ package com.example.medicine;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -24,6 +25,8 @@ public class tin_nhan extends AppCompatActivity  {
     ViewPager pager;
     TabLayout tabLayout;
     TabItem dxlItem,historyItem;
+
+    ImageButton giohang;
 
     PagerAdapter_sy adapter;
 
@@ -50,6 +53,7 @@ public class tin_nhan extends AppCompatActivity  {
         imvDonHang=findViewById(R.id.imvdonhang);
         imvTinNhan=findViewById(R.id.imvtinnhan);
         imvTaiKhoan=findViewById(R.id.imvtaikhoan);
+        giohang=findViewById(R.id.iconButtonCart);
 
         toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
 
@@ -106,6 +110,12 @@ public class tin_nhan extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(tin_nhan.this, acccount.class));
+            }
+        });
+        giohang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(tin_nhan.this, cart.class));
             }
         });
 

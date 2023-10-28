@@ -62,13 +62,13 @@
             android:name=".product_detail"
             android:exported="false" />
         <activity
-            android:name=".signin"
+            android:name=".Home"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".signin"
             android:exported="true" />
         <activity
-            android:name=".Home"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

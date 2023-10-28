@@ -96,9 +96,9 @@
                         android:orientation="vertical">
                         <LinearLayout
                             android:id="@+id/detail_user"
-                            android:layout_width="360dp"
+                            android:layout_width="350dp"
                             android:layout_height="193dp"
-                            android:layout_marginLeft="16.5dp"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginTop="15dp"
                             android:background="#66E9F1F8"
                             android:elevation="4dp"
@@ -200,9 +200,9 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="360dp"
+                            android:layout_width="350dp"
                             android:layout_height="35dp"
-                            android:layout_marginLeft="16.5dp"
+                            android:layout_gravity="center_horizontal"
                             android:background="#EBF0C8"
                             android:layout_marginTop="8dp"
                             android:orientation="horizontal"
@@ -227,7 +227,7 @@
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="75dp"
+                        android:layout_height="70dp"
                         android:orientation="vertical"
                         android:elevation="40dp">
                         <TextView
@@ -240,16 +240,18 @@
                             android:layout_marginLeft="16.5dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="3dp"/>
-                        <LinearLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="30dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="5dp"
-                            android:orientation="horizontal">
+                           >
                             <LinearLayout
-                                android:layout_width="150dp"
+                                android:id="@+id/luotxemlayout"
+                                android:layout_width="145dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="16.5dp"
                                 android:background="#EFEDED"
+                                android:layout_alignParentLeft="true"
                                 android:orientation="horizontal">
                                 <ImageView
                                     android:layout_width="wrap_content"
@@ -266,16 +268,17 @@
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="10dp"/>
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="@color/black"
-                                android:layout_marginLeft="30dp"
-                                />
+                                android:layout_centerInParent="true"
+                                android:background="@color/black" />
                             <LinearLayout
-                                android:layout_width="150dp"
+                                android:layout_width="145dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginLeft="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="16.5dp"
                                 android:background="#EFEDED"
                                 android:orientation="horizontal">
                                 <ImageView
@@ -293,7 +296,7 @@
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="10dp"/>
                             </LinearLayout>
-                        </LinearLayout>
+                        </RelativeLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
@@ -302,7 +305,7 @@
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="179dp"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <TextView
                             android:layout_width="wrap_content"
@@ -313,118 +316,179 @@
                             android:textSize="18sp"
                             android:layout_marginLeft="16.5dp"
                             android:layout_marginTop="8dp"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:orientation="vertical">
-                            <LinearLayout
+<!--                        hosoyte-->
+                            <RelativeLayout
+                                android:id="@+id/hosoyteLayout"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="40dp"
                                 android:paddingTop="5dp"
                                 android:paddingBottom="5dp"
-                                android:orientation="horizontal">
+                               >
                                 <ImageView
+                                    android:id="@+id/imvhosoyteic"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:src="@drawable/ic_hoso"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="16.5dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentLeft="true"
+
                                     />
                                 <TextView
+                                    android:id="@+id/twhosoyte"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/imvhosoyteic"
                                     android:textSize="14sp"
                                     android:text="Hồ sơ y tế"
+                                    android:layout_centerVertical="true"
                                     android:textColor="@color/black"
                                     android:textStyle="normal"
                                     android:layout_marginLeft="15dp"
                                     android:layout_gravity="center_vertical"/>
                                 <ImageView
                                     android:id="@+id/imvHoSoyte"
-                                    android:layout_width="25dp"
-                                    android:layout_height="30dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
                                     android:src="@drawable/ic_right"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="20dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="220dp"/>
-
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="5dp"
-                                android:paddingBottom="5dp"
-                                android:orientation="horizontal">
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_calendar"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="16.5dp"
-                                    />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textSize="14sp"
-                                    android:text="Lịch sử tìm kiếm"
-                                    android:textColor="@color/black"
-                                    android:textStyle="normal"
-                                    android:layout_marginLeft="15dp"
-                                    android:layout_gravity="center_vertical"/>
-                                <ImageView
-                                    android:layout_width="25dp"
-                                    android:layout_height="30dp"
-                                    android:src="@drawable/ic_right"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="182dp"/>
-
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="5dp"
-                                android:paddingBottom="5dp"
-                                android:orientation="horizontal">
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_tags"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="16.5dp"
                                     />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textSize="14sp"
-                                    android:text="Author"
-                                    android:textColor="@color/black"
-                                    android:textStyle="normal"
-                                    android:layout_marginLeft="15dp"
-                                    android:layout_gravity="center_vertical"/>
-                                <ImageView
-                                    android:id="@+id/author_profile"
-                                    android:layout_width="25dp"
-                                    android:layout_height="30dp"
-                                    android:src="@drawable/ic_right"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="240dp"/>
+                            </RelativeLayout>
+<!--                        lichsutimkiem-->
+                        <RelativeLayout
+                            android:id="@+id/lichsutimkiemLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            >
+                            <ImageView
+                                android:id="@+id/imvlichsutimkiemic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_calendar"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="16.5dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
 
-                            </LinearLayout>
-                        </LinearLayout>
+                                />
+                            <TextView
+                                android:id="@+id/twlichjsutimkiem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/imvlichsutimkiemic"
+                                android:textSize="14sp"
+                                android:text="Lịch sử tìm kiếm"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/black"
+                                android:textStyle="normal"
+                                android:layout_marginLeft="15dp"
+                                android:layout_gravity="center_vertical"/>
+                            <ImageView
+                                android:id="@+id/imvlichsutimkiem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_right"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_gravity="center_vertical"
+                                />
+
+                        </RelativeLayout>
+<!--                        author-->
+                        <RelativeLayout
+                            android:id="@+id/authorLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            >
+                            <ImageView
+                                android:id="@+id/imvauthoric"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_person"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="16.5dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+
+                                />
+                            <TextView
+                                android:id="@+id/twauthor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/imvauthoric"
+                                android:textSize="14sp"
+                                android:text="Author"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/black"
+                                android:textStyle="normal"
+                                android:layout_marginLeft="15dp"
+                                android:layout_gravity="center_vertical"/>
+                            <ImageView
+                                android:id="@+id/imvauthor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_right"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_gravity="center_vertical"
+                                />
+
+                        </RelativeLayout>
+<!--                        admin-->
+                        <RelativeLayout
+                            android:id="@+id/adminLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            >
+                            <ImageView
+                                android:id="@+id/imvadminic"
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_admin"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="16.5dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+
+                                />
+                            <TextView
+                                android:id="@+id/twadmin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/imvadminic"
+                                android:textSize="14sp"
+                                android:text="Admin"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/black"
+                                android:textStyle="normal"
+                                android:layout_marginLeft="15dp"
+                                android:layout_gravity="center_vertical"/>
+                            <ImageView
+                                android:id="@+id/imvadmin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_right"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_gravity="center_vertical"
+                                />
+
+                        </RelativeLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
@@ -437,6 +501,7 @@
                         android:orientation="vertical"
                         >
                         <LinearLayout
+                            android:id="@+id/addressLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
@@ -463,7 +528,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
-                            android:paddingBottom="50dp"
+                            android:paddingBottom="70dp"
                             android:orientation="horizontal"
                             >
                             <ImageView
@@ -504,9 +569,10 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:weightSum="5"
+            android:background="@color/white"
             android:gravity="bottom"
             >
             <LinearLayout
@@ -554,7 +620,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imvdonhang"
+                    android:id="@+id/imvdonhangacount"
                     android:layout_width="28dp"
                     android:layout_height="50dp"
                     android:src="@drawable/ic_donhangxam"

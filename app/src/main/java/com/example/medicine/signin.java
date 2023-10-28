@@ -28,7 +28,7 @@ public class signin extends AppCompatActivity {
         btn_signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(signin.this, cart.class));
+                startActivity(new Intent(signin.this, Home.class));
             }
         });
         lk.setOnClickListener(new View.OnClickListener() {

@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -28,6 +29,7 @@ public class Home extends AppCompatActivity {
 
     ImageView  imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan;
     ImageView imageView;
+    ImageButton giohang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,7 @@ public class Home extends AppCompatActivity {
         imvDonHang=findViewById(R.id.imvdonhang);
         imvTinNhan=findViewById(R.id.imvtinnhan);
         imvTaiKhoan=findViewById(R.id.imvtaikhoan);
+        giohang=findViewById(R.id.giohangbtn);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +103,12 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, acccount.class));
+            }
+        });
+        giohang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, cart.class));
             }
         });
 //        BottomNavigationView bottomNavigation = findViewById(R.id.bottom_home);

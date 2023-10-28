@@ -30,6 +30,7 @@
 
             />
         <ImageButton
+            android:id="@+id/giohangbtn"
             android:layout_width="35dp"
             android:layout_height="28dp"
             android:src="@drawable/icon_cart_size"
@@ -303,8 +304,9 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@color/white"
         android:weightSum="5"
         android:gravity="bottom"
         >
