@@ -127,6 +127,7 @@
                                             android:layout_marginBottom="10dp"
                                             android:orientation="vertical">
                                             <TextView
+                                                android:id="@+id/Usernameacccount"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:text="User name"
@@ -135,6 +136,7 @@
                                                 android:textColor="@color/black"
                                                 />
                                             <TextView
+                                                android:id="@+id/txtphone"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:text="+Phone number"
@@ -526,6 +528,7 @@
                                 android:layout_marginTop="8dp"/>
                         </LinearLayout>
                         <LinearLayout
+                            android:id="@+id/btnLogout"
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:paddingBottom="70dp"

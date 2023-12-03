@@ -64,7 +64,7 @@
                                 android:src="@drawable/img_medicine" />
 
                             <TextView
-                                android:id="@+id/productTitle"
+                                android:id="@+id/productDetailTitle"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
@@ -88,7 +88,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/productTitle2"
+                                    android:id="@+id/productDM"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:padding="5dp"
@@ -160,15 +160,31 @@
                                     android:text="CTY CP TẬP ĐOÀN MERAP (Việt Nam)"
                                     android:textSize="20sp" />
                             </LinearLayout>
-                            <TextView
-                                android:id="@+id/productPrice"
-                                android:layout_width="match_parent"
+                            <LinearLayout
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:padding="5dp"
-                                android:text="Price: $10.99"
-                                android:textSize="25sp"
-                                android:textStyle="bold"
-                                android:gravity="center" />
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Price:"
+                                    android:layout_marginLeft="60dp"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center" />
+                                <TextView
+                                    android:id="@+id/productPrice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text=""
+                                    android:textSize="25sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#FF80AB"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
 
                             <!--             choose amount product           -->
                             <LinearLayout

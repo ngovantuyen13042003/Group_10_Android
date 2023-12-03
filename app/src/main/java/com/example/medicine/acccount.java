@@ -1,5 +1,8 @@
 package com.example.medicine;
 
+import static android.app.PendingIntent.getActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,8 +20,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import com.example.medicine.object.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.Gson;
+
+import android.content.SharedPreferences;
 
 public class acccount extends AppCompatActivity {
 
@@ -27,42 +34,34 @@ public class acccount extends AppCompatActivity {
     NavigationView navigationView;
     ImageView imvaccountsetting, imvhosoyte,imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan;
     RelativeLayout layoutHosoyte,LayoutAuthor,LayoutAdmin;
-    LinearLayout layoutAddress;
-    TextView saveaddress;
+    LinearLayout layoutAddress, LayoutLogout;
+    TextView saveaddress,username,phonenum;
     ImageButton btngiohang;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+        AnhXa();
 
-        Toolbar toolbar=findViewById(R.id.mtoolbar);
+        SharedPreferences sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE);
+        String userJson = sharedPreferences.getString("user_object", "");
+
+        Gson gson = new Gson();
+        User user = gson.fromJson(userJson, User.class);
+
+        username.setText(user.getName());
+        phonenum.setText("+" + user.getPhone());
+
+
         setSupportActionBar(toolbar);
-        imvhosoyte=findViewById(R.id.imvHoSoyte);
-
-        drawerLayout=findViewById(R.id.mdrawer);
-        navigationView=findViewById(R.id.mna_view);
         toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar, R.string.open, R.string.close);
 
         drawerLayout.addDrawerListener(toggle);
         toggle.setDrawerIndicatorEnabled(true);
         toggle.syncState();
-        imvHome=findViewById(R.id.imvhome);
-        imvProduct=findViewById(R.id.imvproduct);
-        imvDonHang=findViewById(R.id.imvdonhangacount);
-        imvTinNhan=findViewById(R.id.imvtinnhan);
-        imvTaiKhoan=findViewById(R.id.imvtaikhoan);
-
-        layoutHosoyte=findViewById(R.id.hosoyteLayout);
-        LayoutAuthor=findViewById(R.id.authorLayout);
-        layoutAddress=findViewById(R.id.addressLayout);
-        LayoutAdmin=findViewById(R.id.adminLayout);
-
-        btngiohang=findViewById(R.id.iconButton);
-
-
 
 //        set onclick cho caidattaikhoan
-        imvaccountsetting = findViewById(R.id.imvaccountsetting);
         imvaccountsetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,6 +129,12 @@ public class acccount extends AppCompatActivity {
                 startActivity(new Intent(acccount.this, list_product_admin.class));
             }
         });
+        LayoutLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(acccount.this, signin.class));
+            }
+        });
 
 
 
@@ -169,5 +174,27 @@ public class acccount extends AppCompatActivity {
 //
 //            return true;
 //        });
+    }
+    private void AnhXa(){
+        LayoutLogout = findViewById(R.id.btnLogout);
+        username = findViewById(R.id.Usernameacccount);
+        phonenum = findViewById(R.id.txtphone);
+        toolbar=findViewById(R.id.mtoolbar);
+        imvhosoyte=findViewById(R.id.imvHoSoyte);
+        drawerLayout=findViewById(R.id.mdrawer);
+        navigationView=findViewById(R.id.mna_view);
+        imvHome=findViewById(R.id.imvhome);
+        imvProduct=findViewById(R.id.imvproduct);
+        imvDonHang=findViewById(R.id.imvdonhangacount);
+        imvTinNhan=findViewById(R.id.imvtinnhan);
+        imvTaiKhoan=findViewById(R.id.imvtaikhoan);
+
+        layoutHosoyte=findViewById(R.id.hosoyteLayout);
+        LayoutAuthor=findViewById(R.id.authorLayout);
+        layoutAddress=findViewById(R.id.addressLayout);
+        LayoutAdmin=findViewById(R.id.adminLayout);
+
+        btngiohang=findViewById(R.id.iconButton);
+        imvaccountsetting = findViewById(R.id.imvaccountsetting);
     }
 }

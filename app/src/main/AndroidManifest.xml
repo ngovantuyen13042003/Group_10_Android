@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.medicine">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -53,10 +55,10 @@
 
         <activity
             android:name=".cart"
-            android:exported="false" />
+            android:exported="true" />
         <activity
 
-            android:name=".signup"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".product_detail"
@@ -65,10 +67,10 @@
             android:name=".Home"
             android:exported="false" />
         <activity
-            android:name=".signin"
+            android:name=".signup"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".signin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

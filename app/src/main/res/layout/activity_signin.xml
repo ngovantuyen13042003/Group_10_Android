@@ -42,6 +42,7 @@
         android:hint="Nhập tên đăng nhập"
         android:textStyle="bold"
         android:textColorHint="#AFACAC"
+        android:inputType="textEmailAddress"
         android:textSize="15dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -60,7 +61,7 @@
         android:layout_marginLeft="20dp"
         />
     <EditText
-        android:id="@+id/edt_password"
+        android:id="@+id/txt_password"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:hint="Nhập mật khẩu"
@@ -70,6 +71,7 @@
         android:background="@drawable/custom_edtxt"
         android:backgroundTint="#D0DCD8"
         android:layout_marginLeft="20dp"
+        android:inputType="textPassword"
         android:layout_marginRight="20dp"
         />
     <LinearLayout
@@ -111,6 +113,7 @@
         android:background="@drawable/custom_btn"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:onClick="loginClicked"
         ></Button>
     <TextView
         android:id="@+id/lksignup"
