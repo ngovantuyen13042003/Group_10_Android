@@ -2,7 +2,9 @@ package com.example.medicine;
 
 import static android.app.PendingIntent.getActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -131,8 +133,39 @@ public class acccount extends AppCompatActivity {
         });
         LayoutLogout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(acccount.this, signin.class));
+            public void onClick(View view) {
+                // Tạo AlertDialog.Builder
+                AlertDialog.Builder builder = new AlertDialog.Builder(acccount.this);
+
+                // Thiết lập thông điệp và tiêu đề
+                builder.setMessage("Bạn có muốn đăng xuất?")
+                        .setTitle("Xác nhận");
+
+                // Thêm nút OK
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Xử lý khi người dùng click OK
+                        // Thực hiện hành động tiếp theo ở đây
+                        startActivity(new Intent(acccount.this, signin.class));
+                        SharedPreferences sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.clear();
+                        finish();
+                        finishAffinity();
+                    }
+                });
+
+                // Thêm nút Cancel
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Xử lý khi người dùng click Cancel
+                        dialog.dismiss(); // Đóng dialog
+                    }
+                });
+
+                // Hiển thị AlertDialog
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
 

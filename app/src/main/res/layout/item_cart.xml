@@ -80,7 +80,7 @@
             >
 
             <Button
-                android:id="@+id/btnDecrease"
+                android:id="@+id/btnDecrease1"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
@@ -100,6 +100,14 @@
                 android:text="+" />
         </LinearLayout>
     </LinearLayout>
+    <ImageButton
+        android:id="@+id/btnxoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btnxoa"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"/>
+
 
 
 

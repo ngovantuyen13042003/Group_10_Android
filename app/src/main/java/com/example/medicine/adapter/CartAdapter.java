@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
 import com.example.medicine.R;
@@ -19,15 +18,24 @@ import com.example.medicine.object.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartAdapter extends ArrayAdapter {
+public class CartAdapter extends ArrayAdapter<Product> {
     private Context mcontext;
     ArrayList<Product> listcartProduct;
+
+    public interface OnDeleteButtonClickListener {
+        void onDeleteButtonClick(Product product);
+    }
+
+    private OnDeleteButtonClickListener deleteButtonClickListener;
 
 
     public CartAdapter(@NonNull Context context, int resource, List<Product> objects) {
         super(context, resource, objects);
         this.mcontext =context;
         this.listcartProduct = new ArrayList<>(objects);
+    }
+    public void setOnDeleteButtonClickListener(OnDeleteButtonClickListener listener) {
+        this.deleteButtonClickListener = listener;
     }
 
     @NonNull
@@ -45,7 +53,8 @@ public class CartAdapter extends ArrayAdapter {
             TextView txtDanhMuc = convertView.findViewById((R.id.txtDMcart));
             TextView txtPrice = convertView.findViewById(R.id.txtPrice);
             CheckBox productCheckbox = convertView.findViewById(R.id.checkBox);
-            productCheckbox.setChecked(cartProduct.isChecked());
+            ImageView btndelete =convertView.findViewById(R.id.btnxoa);
+//            productCheckbox.setChecked(cartProduct.isChecked());
 
             Glide.with(this.mcontext).load(cartProduct.getImage()).into(imvAnhpro);
             txtName.setText(cartProduct.getName());
@@ -57,6 +66,14 @@ public class CartAdapter extends ArrayAdapter {
             // su kien khi checkbox thay doi
             productCheckbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 cartProduct.setChecked(isChecked);
+            });
+            btndelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (deleteButtonClickListener != null) {
+                        deleteButtonClickListener.onDeleteButtonClick(listcartProduct.get(position));
+                    }
+                }
             });
         }
         return convertView;

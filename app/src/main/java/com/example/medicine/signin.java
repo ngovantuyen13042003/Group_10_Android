@@ -64,7 +64,7 @@ public class signin extends AppCompatActivity {
         }else {
             // tao mot Retrofit instance
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.56.1:8080")
+                    .baseUrl("https://medicine-w344.onrender.com")  //http://192.168.56.1:8080  https://medicine-w344.onrender.com
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             // Tao mot interface de post

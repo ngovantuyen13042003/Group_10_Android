@@ -33,7 +33,7 @@
             <TextView
                 android:id="@+id/desscription"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:padding="5dp"
                 android:textSize="13sp"
                 android:text="Product Description" />

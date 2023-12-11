@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +29,7 @@ import com.google.gson.Gson;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -62,13 +64,14 @@ public class ProductAdapter extends ArrayAdapter<Product> {
             LayoutInflater inflater=(LayoutInflater)ct.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.item_product,null);
         }
-        if (arr.size()>0){
-            Product product =this.arr.get(position);
+        if (arr.size()>0) {
+            Product product = this.arr.get(position);
             ImageView productImg = convertView.findViewById(R.id.productImage);
             TextView productname = convertView.findViewById(R.id.productname);
             TextView productDescription = convertView.findViewById(R.id.desscription);
             TextView productprice = convertView.findViewById(R.id.productprice);
             TextView cart = convertView.findViewById(R.id.cart);
+            Button xoa = convertView.findViewById(R.id.btnDecrease1);
 
             Glide.with(this.ct).load(product.getImage()).into(productImg);
             productname.setText(product.getName());
@@ -85,42 +88,37 @@ public class ProductAdapter extends ArrayAdapter<Product> {
                     // Chuyển sang trang product_detail và truyền thông tin sản phẩm
                     Intent intent = new Intent(ct, product_detail.class);
                     intent.putExtra("productName", clickedProduct.getName());
-                    intent.putExtra("price",clickedProduct.getPrice());
+                    intent.putExtra("price", clickedProduct.getPrice());
                     intent.putExtra("description", clickedProduct.getDescription());
-                    intent.putExtra("img",clickedProduct.getImage());
-                    intent.putExtra("danhmuc",clickedProduct.getCategoryId());
+                    intent.putExtra("img", clickedProduct.getImage());
+                    intent.putExtra("danhmuc", clickedProduct.getCategoryId());
                     // Thêm các thông tin sản phẩm khác cần thiết vào Intent nếu cần
 
                     ct.startActivity(intent);
                 }
             });
+            SharedPreferences sharedPreferences = ct.getSharedPreferences("product_data", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            Set<String> productSet = sharedPreferences.getStringSet("product_set", new HashSet<>());
             cart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Product product1 = arr.get(position);
-
-                    // gui  product qua cart
-//                    Intent intent = new Intent(ct,com.example.medicine.cart.class);
-//                    intent.putExtra("name",product1.getName());
-//                    intent.putExtra("price",product1.getPrice());
-//                    intent.putExtra("dm",product1.getCategoryId());
-//                    intent.putExtra("img",product1.getImage());
-//                    ct.startActivity(intent);
-                    SharedPreferences sharedPreferences = ct.getSharedPreferences("product_data", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    Set<String> productSet = sharedPreferences.getStringSet("product_set", new HashSet<>());
                     Gson gson = new Gson();
 // Chuyển đổi sản phẩm thành chuỗi JSON và thêm vào danh sách
                     String productJson = gson.toJson(product1);
                     productSet.add(productJson);
 // Lưu danh sách sản phẩm mới vào SharedPreferences
+                    editor.clear();
                     editor.putStringSet("product_set", productSet);
                     editor.apply();
                     Toast.makeText(ct, "Đã thêm " + product.getName() + " vào giỏ hàng", Toast.LENGTH_SHORT).show();
                 }
             });
-
         }
+
+
+
         return convertView;
     }
 }
