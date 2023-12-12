@@ -1,35 +1,25 @@
 package com.example.medicine;
 
 import android.content.Intent;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.medicine.adapter.ProductAdapter;
 import com.example.medicine.api.ApiLaySp;
 import com.example.medicine.interfaces.LaySPVe;
-import com.example.medicine.object.Product;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.medicine.model.Product;
 import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONArray;

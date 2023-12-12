@@ -13,23 +13,24 @@ import androidx.annotation.NonNull;
 
 import com.bumptech.glide.Glide;
 import com.example.medicine.R;
-import com.example.medicine.object.Product;
+import com.example.medicine.model.MyCartModel;
+import com.example.medicine.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartAdapter extends ArrayAdapter<Product> {
+public class CartAdapter extends ArrayAdapter<MyCartModel> {
     private Context mcontext;
-    ArrayList<Product> listcartProduct;
+    List<MyCartModel> listcartProduct;
 
     public interface OnDeleteButtonClickListener {
-        void onDeleteButtonClick(Product product);
+        void onDeleteButtonClick(MyCartModel myCartModel);
     }
 
     private OnDeleteButtonClickListener deleteButtonClickListener;
 
 
-    public CartAdapter(@NonNull Context context, int resource, List<Product> objects) {
+    public CartAdapter(@NonNull Context context, int resource, List<MyCartModel> objects) {
         super(context, resource, objects);
         this.mcontext =context;
         this.listcartProduct = new ArrayList<>(objects);
@@ -46,7 +47,7 @@ public class CartAdapter extends ArrayAdapter<Product> {
             convertView = inflater.inflate(R.layout.item_cart,null);
         }
         if (listcartProduct.size() > 0){
-            Product cartProduct = this.listcartProduct.get(position);
+            MyCartModel cartProduct = this.listcartProduct.get(position);
             // Anh xa giao dien item
             ImageView imvAnhpro = convertView.findViewById(R.id.imvProductCart);
             TextView txtName = convertView.findViewById(R.id.txtNameProductCart);
@@ -56,11 +57,11 @@ public class CartAdapter extends ArrayAdapter<Product> {
             ImageView btndelete =convertView.findViewById(R.id.btnxoa);
 //            productCheckbox.setChecked(cartProduct.isChecked());
 
-            Glide.with(this.mcontext).load(cartProduct.getImage()).into(imvAnhpro);
+            Glide.with(this.mcontext).load(cartProduct.getImgurl()).into(imvAnhpro);
             txtName.setText(cartProduct.getName());
-            String id = String.valueOf(cartProduct.getCategoryId());
+//            String id = String.valueOf(cartProduct.getCategoryId());
             String price = String.valueOf(cartProduct.getPrice());
-            txtDanhMuc.setText("Thuốc Tây");
+            txtDanhMuc.setText("Thuốc tây");
             txtPrice.setText(price + " vnd");
 
             // su kien khi checkbox thay doi

@@ -1,5 +1,4 @@
-package com.example.medicine.object;
-import android.text.BoringLayout;
+package com.example.medicine.model;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,7 +8,7 @@ import java.util.ArrayList;
 public class Product {
     private int id;
     private String name;
-    private double price;
+    private Integer price;
     private String description;
     private float vote;
     private String image;
@@ -31,7 +30,7 @@ public class Product {
             description=o.getString("description");
         }
         if(o.has("price")){
-            price= o.getDouble("price");
+            price= o.getInt("price");
         }
         if(o.has("image")){
             image=o.getString("image");
@@ -41,7 +40,7 @@ public class Product {
         }
     }
 
-    public Product(int id, String name, double price, String description, float vote, String image, int quantity, int categoryId, Integer[] ids) {
+    public Product(int id, String name, Integer price, String description, float vote, String image, int quantity, int categoryId, Integer[] ids) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -52,13 +51,13 @@ public class Product {
         this.categoryId = categoryId;
         this.ids = ids;
     }
-    public Product(String name, double price, String description,String image) {
+    public Product(String name, Integer price, String description,String image) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.image = image;
     }
-    public Product(String name, double price,String image) {
+    public Product(String name, Integer price,String image) {
         this.name = name;
         this.price = price;
         this.image = image;
@@ -85,11 +84,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 

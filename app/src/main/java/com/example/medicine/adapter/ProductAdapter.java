@@ -3,35 +3,36 @@ package com.example.medicine.adapter;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.view.LayoutInflater;
-import retrofit2.converter.gson.GsonConverterFactory;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.TextView;import retrofit2.Callback;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.medicine.R;
-import com.example.medicine.cart;
-import com.example.medicine.object.Product;
+import com.example.medicine.api.AppApi;
+import com.example.medicine.api.CartAPI;
+import com.example.medicine.model.MyCartModel;
+import com.example.medicine.model.Product;
+import com.example.medicine.model.User;
 import com.example.medicine.product_detail;
 import com.google.gson.Gson;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+
+import okhttp3.OkHttpClient;
+import retrofit2.Call;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductAdapter extends ArrayAdapter<Product> {
     private Context ct;
@@ -103,16 +104,60 @@ public class ProductAdapter extends ArrayAdapter<Product> {
             cart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    Retrofit retrofit = new Retrofit.Builder()
+                            .baseUrl(AppApi.BASE_URL)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .client(new OkHttpClient.Builder().build())
+                            .build();
+
+                    CartAPI categoryAPI = retrofit.create(CartAPI.class);
                     Product product1 = arr.get(position);
+                    MyCartModel myCartModel = new MyCartModel();
+                    myCartModel.setIdProduct(product.getId());
+                    myCartModel.setName(product1.getName());
+                    myCartModel.setImgurl(product1.getImage());
+                    myCartModel.setPrice(product1.getPrice());
+                    myCartModel.setQuantity(1);
+                    myCartModel.setTotalPrice(product1.getPrice());
+
+                    SharedPreferences sharedPreferences = ct.getSharedPreferences("user_data", Context.MODE_PRIVATE);
+                    String userJson = sharedPreferences.getString("user_object", "");
                     Gson gson = new Gson();
-// Chuyển đổi sản phẩm thành chuỗi JSON và thêm vào danh sách
-                    String productJson = gson.toJson(product1);
-                    productSet.add(productJson);
-// Lưu danh sách sản phẩm mới vào SharedPreferences
-                    editor.clear();
-                    editor.putStringSet("product_set", productSet);
-                    editor.apply();
-                    Toast.makeText(ct, "Đã thêm " + product.getName() + " vào giỏ hàng", Toast.LENGTH_SHORT).show();
+                    User user = gson.fromJson(userJson, User.class);
+
+                    myCartModel.setIdUser(user.getId());
+
+
+                    Call<MyCartModel> call = categoryAPI.addToCart(myCartModel);
+                    call.enqueue(new Callback<MyCartModel>() {
+                        @Override
+                        public void onResponse(Call<MyCartModel> call, Response<MyCartModel> response) {
+                            if(response.isSuccessful()) {
+                                MyCartModel data = response.body();
+                                Toast.makeText(ct, "Đã thêm " + product.getName() + " vào giỏ hàng", Toast.LENGTH_SHORT).show();
+                            }else {
+                                Log.e("API ERROR", "goi failed");
+                                Toast.makeText(ct, "them failed " + product.getName() + " vào giỏ hàng", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<MyCartModel> call, Throwable t) {
+                            Log.e("API Error", "Failed to fetch data: " + t.getMessage());
+                            Toast.makeText(ct, "goi failed " + product.getName() + " vào giỏ hàng", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+//                    Product product1 = arr.get(position);
+//                    Gson gson = new Gson();
+//// Chuyển đổi sản phẩm thành chuỗi JSON và thêm vào danh sách
+//                    String productJson = gson.toJson(product1);
+//                    productSet.add(productJson);
+//// Lưu danh sách sản phẩm mới vào SharedPreferences
+//                    editor.clear();
+//                    editor.putStringSet("product_set", productSet);
+//                    editor.apply();
+
                 }
             });
         }

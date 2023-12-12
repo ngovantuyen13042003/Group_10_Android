@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.bumptech.glide.Glide;
-import com.example.medicine.object.Product;
+import com.example.medicine.model.Product;
 
 import java.util.ArrayList;
 

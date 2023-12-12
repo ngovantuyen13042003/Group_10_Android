@@ -1,6 +1,6 @@
 package com.example.medicine.interfaces;
 
-import com.example.medicine.object.User;
+import com.example.medicine.model.User;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

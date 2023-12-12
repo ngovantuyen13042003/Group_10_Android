@@ -1,4 +1,4 @@
-package com.example.medicine.object;
+package com.example.medicine.model;
 
 public class User {
     private int id;
