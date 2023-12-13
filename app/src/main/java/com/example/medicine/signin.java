@@ -5,13 +5,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.medicine.interfaces.SiginAPIservice;
+import com.example.medicine.interfaces.AccountAPIservice;
+import com.example.medicine.interfaces.AccountAPIservice;
 import com.example.medicine.model.User;
 import com.google.gson.Gson;
 
@@ -63,11 +65,11 @@ public class signin extends AppCompatActivity {
         }else {
             // tao mot Retrofit instance
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("https://medicine-w344.onrender.com")  //http://192.168.56.1:8080  https://medicine-w344.onrender.com
+                    .baseUrl("http://192.168.56.1:8080")  //http://192.168.56.1:8080  https://medicine-w344.onrender.com
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             // Tao mot interface de post
-            SiginAPIservice service = retrofit.create(SiginAPIservice.class);
+            AccountAPIservice service = retrofit.create(AccountAPIservice.class);
 
             // tao doi tuong User
             User user =  new User();

@@ -61,6 +61,7 @@
         android:textStyle="bold"
         android:textColorHint="#AFACAC"
         android:textSize="15dp"
+        android:inputType="textPassword"
         android:background="@drawable/custom_edtxt"
         android:backgroundTint="#D0DCD8"
         android:layout_marginLeft="20dp"
@@ -85,6 +86,7 @@
         android:textStyle="bold"
         android:textColorHint="#AFACAC"
         android:textSize="15dp"
+        android:inputType="textPassword"
         android:background="@drawable/custom_edtxt"
         android:backgroundTint="#D0DCD8"
         android:layout_marginLeft="20dp"
@@ -103,6 +105,7 @@
         ></CheckBox>
 
     <Button
+        android:id="@+id/btnsigup"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -114,6 +117,7 @@
         android:background="@drawable/custom_btn"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:onClick="SigupClicked"
         ></Button>
     <TextView
         android:id="@+id/lksignin"
