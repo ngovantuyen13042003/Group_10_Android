@@ -43,7 +43,7 @@
                 android:layout_marginLeft="20dp"
                 />
             <EditText
-                android:layout_width="360dp"
+                android:layout_width="320dp"
                 android:layout_height="65dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/backgrond_andanh"
@@ -63,7 +63,7 @@
                 android:layout_marginTop="15dp"
                 />
             <EditText
-                android:layout_width="360dp"
+                android:layout_width="320dp"
                 android:layout_height="65dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/backgrond_andanh"
@@ -84,7 +84,7 @@
                 />
             <Spinner
                 android:id="@+id/spinerloaithuoc"
-                android:layout_width="360dp"
+                android:layout_width="320dp"
                 android:layout_height="65dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/backgrond_andanh"/>

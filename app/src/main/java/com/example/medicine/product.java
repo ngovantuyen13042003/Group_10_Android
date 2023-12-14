@@ -33,7 +33,6 @@ public class product extends AppCompatActivity implements LaySPVe {
     TextView cart1,cart2,cart3,cart4,cart5,cart6,cart7,cart8;
     NavigationView navigationView;
     DrawerLayout drwproduct;
-    Button btn_mua1,btn_mua2,btn_mua3,btn_mua4,btn_mua5,btn_mua6,btn_mua7,btn_mua8;
     ImageView  imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan;
     GridView gvdsProduct;
     ProductAdapter adapter;
@@ -126,7 +125,7 @@ public class product extends AppCompatActivity implements LaySPVe {
 
    private void  init(){
         productArrayList = new ArrayList<>();
-        productArrayList.add(new Product("Thuốc hạ sốt ute",100000,"Hạ sốt nhanh","https://baobihoanggia.com/wp-content/uploads/2023/06/in-hop-thuoc-tay-3-1.jpg"));
+//        productArrayList.add(new Product("Thuốc hạ sốt ute",100000,"Hạ sốt nhanh","https://baobihoanggia.com/wp-content/uploads/2023/06/in-hop-thuoc-tay-3-1.jpg"));
 //        productArrayList.add(new Product("Bao cao su",100000,"Hạ sốt nhanh","https://baobihoanggia.com/wp-content/uploads/2023/06/in-hop-thuoc-tay-3-1.jpg"));
 //        productArrayList.add(new Product("Thuốc hạ sốt ute",100000,"Hạ sốt nhanh","https://baobihoanggia.com/wp-content/uploads/2023/06/in-hop-thuoc-tay-3-1.jpg"));
 //        productArrayList.add(new Product("Thuốc hạ sốt ute",100000,"Hạ sốt nhanh","https://baobihoanggia.com/wp-content/uploads/2023/06/in-hop-thuoc-tay-3-1.jpg"));

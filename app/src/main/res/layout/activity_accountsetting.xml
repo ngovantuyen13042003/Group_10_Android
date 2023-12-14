@@ -76,6 +76,7 @@
                     android:layout_marginRight="70dp"
                     android:layout_gravity="center_vertical"/>
                 <TextView
+                    android:id="@+id/stname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nguyen Van A"
@@ -111,6 +112,7 @@
                     android:layout_marginRight="80dp"
                     android:layout_gravity="center_vertical"/>
                 <TextView
+                    android:id="@+id/stemail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="user@gmail.com"
@@ -144,6 +146,7 @@
                     android:layout_marginRight="70dp"
                     android:layout_gravity="center_vertical"/>
                 <TextView
+                    android:id="@+id/stsdt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="03588*****"
@@ -179,7 +182,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="dd/mm/yyyy"
+                    android:text="30/04/2003"
                     android:textSize="18sp"
                     android:textColor="#3427CF"
                     android:layout_gravity="center_vertical"/>
@@ -212,7 +215,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nam/Nữ"
+                    android:text="Nam"
                     android:textSize="18sp"
                     android:textColor="#3427CF"
                     android:layout_gravity="center_vertical"/>

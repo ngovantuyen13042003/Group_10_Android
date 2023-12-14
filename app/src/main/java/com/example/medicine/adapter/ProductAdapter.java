@@ -17,6 +17,7 @@ import com.bumptech.glide.Glide;
 import com.example.medicine.R;
 import com.example.medicine.api.AppApi;
 import com.example.medicine.api.CartAPI;
+import com.example.medicine.cart;
 import com.example.medicine.model.MyCartModel;
 import com.example.medicine.model.Product;
 import com.example.medicine.model.User;
@@ -73,6 +74,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
             TextView productprice = convertView.findViewById(R.id.productprice);
             TextView cart = convertView.findViewById(R.id.cart);
             Button xoa = convertView.findViewById(R.id.btnDecrease1);
+            Button buynow = convertView.findViewById(R.id.btn_mua);
 
             Glide.with(this.ct).load(product.getImage()).into(productImg);
             productname.setText(product.getName());
@@ -80,6 +82,13 @@ public class ProductAdapter extends ArrayAdapter<Product> {
 
             String pricetext = String.valueOf(product.getPrice());
             productprice.setText(pricetext);
+            // btn mua ngay
+            buynow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ct.startActivity(new Intent(ct,com.example.medicine.cart.class));
+                }
+            });
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

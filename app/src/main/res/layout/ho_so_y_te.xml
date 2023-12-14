@@ -77,16 +77,15 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mtoolbar"
-        android:layout_width="360dp"
-        android:layout_height="72dp"
+        android:layout_width="297dp"
+        android:layout_height="64dp"
         android:layout_marginLeft="50dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Hồ sơ y tế"
-        app:titleTextColor="@color/black">
-    </androidx.appcompat.widget.Toolbar>
+        app:titleTextColor="@color/black"></androidx.appcompat.widget.Toolbar>
 
     <Button
         android:id="@+id/sua"
