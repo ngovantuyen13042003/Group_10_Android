@@ -56,6 +56,7 @@ public class CartAdapter extends ArrayAdapter<MyCartModel> {
             TextView txtPrice = convertView.findViewById(R.id.txtPrice);
             CheckBox productCheckbox = convertView.findViewById(R.id.checkBox);
             ImageView btndelete =convertView.findViewById(R.id.btnxoa);
+            TextView tvQuantity = convertView.findViewById(R.id.tvQuantity);
 //            productCheckbox.setChecked(cartProduct.isChecked());
 
             Glide.with(this.mcontext).load(cartProduct.getImgurl()).into(imvAnhpro);
@@ -64,6 +65,7 @@ public class CartAdapter extends ArrayAdapter<MyCartModel> {
             String price = String.valueOf(cartProduct.getPrice());
             txtDanhMuc.setText("Thuốc tây");
             txtPrice.setText(price + " vnd");
+            tvQuantity.setText(cartProduct.getQuantity() + "");
 
             // su kien khi checkbox thay doi
             productCheckbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
