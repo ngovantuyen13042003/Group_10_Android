@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,8 +27,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class signup extends AppCompatActivity {
 
-    EditText usertxt, passtxt,confimtxt,emailtxt;
-    TextView  lk;
+    private   CheckBox checkboxdk;
+    private EditText usertxt, passtxt,confimtxt,emailtxt;
+    private TextView  lk;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +49,7 @@ public class signup extends AppCompatActivity {
         passtxt = findViewById(R.id.edt_password);
         confimtxt=findViewById(R.id.edt_passwordConfirm);
         lk = findViewById(R.id.lksignin);
+        checkboxdk=findViewById(R.id.checkboxDK);
 
     }
     public void SigupClicked(View view){
@@ -60,6 +63,9 @@ public class signup extends AppCompatActivity {
         }
         if (password.equals(confim) == false){
             Toast.makeText(signup.this, "Mật khẩu không trùng khớp!",Toast.LENGTH_SHORT).show();
+        }
+        if (checkboxdk.isChecked() == false){
+            Toast.makeText(signup.this, "Vui lòng chấp nhận điều khoản",Toast.LENGTH_SHORT).show();
         }else {
             // tao mot Retrofit instance
             Retrofit retrofit = new Retrofit.Builder()

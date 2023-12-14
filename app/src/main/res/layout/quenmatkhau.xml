@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
     android:orientation="vertical">
 
@@ -74,14 +76,14 @@
         android:ems="10"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
-        android:background="@drawable/rounded_edittext_background"
+        android:background="@drawable/custom_edtxt"
         android:inputType="textEmailAddress"
        android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Email"
         android:paddingStart="30dp"
         android:autofillHints="emailAddress"
-        android:textColorHint="@color/material_dynamic_neutral70"
+        android:textColorHint="@color/chudao"
         />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/rounded_button"

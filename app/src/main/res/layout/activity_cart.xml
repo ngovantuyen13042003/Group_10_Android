@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="10dp"
     tools:context=".cart">
 
     <LinearLayout
@@ -16,6 +15,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -53,6 +54,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="2"
                 android:gravity="start"
+                android:layout_marginLeft="20dp"
                 android:text="Thông tin giao hàng"
                 android:textColor="#050505"
                 android:textSize="23sp" />
@@ -301,7 +303,7 @@
         <ListView
             android:id="@+id/listViewCart"
             android:layout_width="match_parent"
-            android:layout_marginBottom="75dp"
+            android:layout_marginBottom="95dp"
             android:layout_height="wrap_content">
 
         </ListView>
@@ -334,6 +336,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
                 android:gravity="left"
                 android:layout_weight="1"
                 />
@@ -345,6 +348,7 @@
                 android:textColor="@color/chudao"
                 android:textStyle="bold"
                 android:layout_gravity="bottom"
+                android:layout_marginRight="10dp"
                 android:gravity="right"
                 android:layout_weight="1"
 
@@ -357,6 +361,7 @@
             android:orientation="horizontal"
             android:layout_weight="2"
             android:gravity="center"
+            android:layout_marginBottom="10dp"
             android:weightSum="4"
             >
 
@@ -366,6 +371,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Tất cả"
+                android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 />
 
@@ -386,6 +392,7 @@
                 android:id="@+id/btn_buy_cart"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MUA NGAY"

@@ -25,7 +25,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class signin extends AppCompatActivity {
-    TextView lk,forget_password;
+    TextView lk,forgetpassword;
 
     EditText edtemail, edtpass;
     @Override
@@ -34,10 +34,10 @@ public class signin extends AppCompatActivity {
         setContentView(R.layout.activity_signin);
         AnhXa();
 
-        forget_password.setOnClickListener(new View.OnClickListener() {
+        forgetpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(signin.this, forgetpassword.class));
+                startActivity(new Intent(signin.this, com.example.medicine.forgetpassword.class));
             }
         });
 
@@ -50,7 +50,7 @@ public class signin extends AppCompatActivity {
     }
     private void  AnhXa(){
         lk = findViewById(R.id.lksignup);
-        forget_password = findViewById(R.id.quenMK);
+        forgetpassword = findViewById(R.id.forgetpass);
         edtemail = findViewById(R.id.txt_username);
         edtpass = findViewById(R.id.txt_password);
     }
