@@ -49,7 +49,7 @@ public class acccount extends AppCompatActivity {
         User user = gson.fromJson(userJson, User.class);
 
         username.setText(user.getName());
-        phonenum.setText("+" + user.getPhone());
+        //phonenum.setText("+" + user.getPhone());
 
 
         setSupportActionBar(toolbar);

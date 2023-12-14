@@ -134,15 +134,14 @@
         android:id="@+id/thong_tin"
         android:layout_width="414dp"
         android:layout_height="47dp"
-        android:layout_marginBottom="336dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="316dp"
         android:background="#cccc"
         android:gravity="center"
         android:text="      Ngày đo        Tuổi         Chiều cao        Cân nặng         BMI"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView

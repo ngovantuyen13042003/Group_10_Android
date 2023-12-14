@@ -27,9 +27,8 @@ public class Home extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     NavigationView navigationView;
 
-    ImageView  imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan;
+    ImageView  imvHome, imvProduct,imvDonHang, imvTinNhan, imvTaiKhoan,giohang;
     ImageView imageView;
-    ImageButton giohang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

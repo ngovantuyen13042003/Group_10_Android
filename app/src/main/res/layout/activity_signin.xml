@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:text="Quên mật khẩu?"
             android:textColor="#9F0D0D"
-            android:textSize="15dp"
+            android:textSize="13dp"
             >
         </TextView>
     </LinearLayout>

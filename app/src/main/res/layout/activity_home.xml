@@ -5,41 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
-        android:id="@+id/toolbar">
+        android:layout_marginTop="0dp">
+
         <ImageView
             android:id="@+id/imageview"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_menu"
-            />
+            android:src="@drawable/ic_menu" />
+
         <EditText
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/custom_edtxt"
-            android:hint="Search"
             android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_edtxt"
             android:drawableRight="@drawable/icon_size"
             android:drawablePadding="8dp"
+            android:hint="Search"
 
             />
-        <ImageButton
+
+        <ImageView
             android:id="@+id/giohangbtn"
-            android:layout_width="35dp"
-            android:layout_height="28dp"
-            android:src="@drawable/icon_cart_size"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:layout_gravity="end"
             android:layout_marginRight="10dp"
-            android:layout_alignParentRight="true" />
+            android:src="@drawable/cart_icon" />
 
     </androidx.appcompat.widget.Toolbar>
-
 
     <LinearLayout
         android:layout_width="match_parent"

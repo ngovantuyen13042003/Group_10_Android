@@ -171,7 +171,7 @@ public class product extends AppCompatActivity implements LaySPVe {
 
     @Override
     public void BatDau() {
-        Toast.makeText(this,"Dang tai", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Đang tải", Toast.LENGTH_SHORT).show();
     }
 
     @Override

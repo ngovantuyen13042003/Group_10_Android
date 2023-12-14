@@ -26,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class signup extends AppCompatActivity {
 
-    EditText usertxt, passtxt,confimtxt;
+    EditText usertxt, passtxt,confimtxt,emailtxt;
     TextView  lk;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +42,20 @@ public class signup extends AppCompatActivity {
         });
     }
     private void AnhXa(){
-        usertxt=findViewById(R.id.txt_username);
-        passtxt= findViewById(R.id.edt_password);
+        usertxt =findViewById(R.id.txt_username);
+        emailtxt = findViewById(R.id.txt_email);
+        passtxt = findViewById(R.id.edt_password);
         confimtxt=findViewById(R.id.edt_passwordConfirm);
         lk = findViewById(R.id.lksignin);
 
     }
     public void SigupClicked(View view){
-        String email = usertxt.getText().toString();
+        String username = usertxt.getText().toString();
+        String email = emailtxt.getText().toString();
         String password = passtxt.getText().toString();
         String confim = confimtxt.getText().toString();
 
-        if(email.isEmpty() || password.isEmpty() || confim.isEmpty()){
+        if(email.isEmpty() || password.isEmpty() || confim.isEmpty() || username.isEmpty()){
             Toast.makeText(signup.this,"Vui lòng nhập đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
         }
         if (password.equals(confim) == false){
@@ -67,6 +69,7 @@ public class signup extends AppCompatActivity {
                     .build();
             // tao doi tuong User
             User user =  new User();
+            user.setName(username);
             user.setEmail(email);
             user.setPassword(password);
             // Tao mot interface de post

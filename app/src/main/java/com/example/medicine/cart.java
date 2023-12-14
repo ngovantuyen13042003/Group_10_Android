@@ -38,7 +38,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class cart extends AppCompatActivity {
     private int quantity = 0, quantity1 = 0;
     Button btn_buy_cart,btn_change;
-    private TextView back;
+    private TextView back, name;
 
     ListView listViewcart;
 
@@ -112,6 +112,7 @@ public class cart extends AppCompatActivity {
         btn_buy_cart = findViewById(R.id.btn_buy_cart);
         btn_change = findViewById(R.id.btn_change);
         back = findViewById(R.id.back_product);
+        name = findViewById(R.id.txtname);
         btn_change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
