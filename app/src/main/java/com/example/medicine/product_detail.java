@@ -83,7 +83,7 @@ public class product_detail extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             String productName = intent.getStringExtra("productName");
-            double productprice = intent.getDoubleExtra("price",-1);
+            double productprice = intent.getDoubleExtra("price",30000);
             String productdsription = intent.getStringExtra("description");
             String image = intent.getStringExtra("img");
             int danhmuc = intent.getIntExtra("danhmuc", 0);
