@@ -114,7 +114,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
                     CartAPI categoryAPI = retrofit.create(CartAPI.class);
                     Product product1 = arr.get(position);
                     MyCartModel myCartModel = new MyCartModel();
-                    myCartModel.setIdProduct(product.getId());
+                    myCartModel.setIdProduct(product1.getId());
                     myCartModel.setName(product1.getName());
                     myCartModel.setImgurl(product1.getImage());
                     myCartModel.setPrice(product1.getPrice());
@@ -125,6 +125,9 @@ public class ProductAdapter extends ArrayAdapter<Product> {
                     String userJson = sharedPreferences.getString("user_object", "");
                     Gson gson = new Gson();
                     User user = gson.fromJson(userJson, User.class);
+
+                    Log.i("product id: ", product1.getId() + "");
+                    Log.i("User id: ", user.getId() + "");
 
                     myCartModel.setIdUser(user.getId());
 
@@ -148,6 +151,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
                             Toast.makeText(ct, "goi failed " + product.getName() + " vào giỏ hàng", Toast.LENGTH_SHORT).show();
                         }
                     });
+
 //                    Product product1 = arr.get(position);
 //                    Gson gson = new Gson();
 //// Chuyển đổi sản phẩm thành chuỗi JSON và thêm vào danh sách

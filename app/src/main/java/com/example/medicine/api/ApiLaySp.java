@@ -22,7 +22,7 @@ public class ApiLaySp extends AsyncTask<Void,Void,Void> {
     protected Void doInBackground(Void... voids) {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url("http://192.168.56.1:8080/api/product") //http://192.168.56.1:8080/api/product   https://medicine-w344.onrender.com/api/product
+                .url(AppApi.BASE_URL + "/api/product") //http://192.168.56.1:8080/api/product   https://medicine-w344.onrender.com/api/product
                 .build();
         data = null;
         try {

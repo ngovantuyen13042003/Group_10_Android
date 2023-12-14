@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.medicine.api.AppApi;
 import com.example.medicine.interfaces.AccountAPIservice;
 import com.example.medicine.interfaces.AccountAPIservice;
 import com.example.medicine.model.User;
@@ -60,7 +61,7 @@ public class signup extends AppCompatActivity {
         }else {
             // tao mot Retrofit instance
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.56.1:8080")  //http://192.168.56.1:8080  https://medicine-w344.onrender.com
+                    .baseUrl(AppApi.BASE_URL)  //http://192.168.56.1:8080  https://medicine-w344.onrender.com
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(new OkHttpClient.Builder().build())
                     .build();

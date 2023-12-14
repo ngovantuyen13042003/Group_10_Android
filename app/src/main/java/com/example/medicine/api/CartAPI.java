@@ -19,6 +19,8 @@ public interface CartAPI {
     @GET("/api/cart/{idUser}")
     Call<List<MyCartModel>> getAllCartByUserId(@Path(("idUser")) Integer idUser);
 
+
     @DELETE("/api/cart/{idCart}")
     Call<Void> deleteCartItem(@Path("idCart") Integer idCart);
+
 }

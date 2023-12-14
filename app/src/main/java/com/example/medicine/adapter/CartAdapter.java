@@ -1,6 +1,7 @@
 package com.example.medicine.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,9 +72,7 @@ public class CartAdapter extends ArrayAdapter<MyCartModel> {
             btndelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (deleteButtonClickListener != null) {
                         deleteButtonClickListener.onDeleteButtonClick(listcartProduct.get(position));
-                    }
                 }
             });
         }

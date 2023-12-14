@@ -46,6 +46,65 @@ public class cart extends AppCompatActivity {
 
     private List<MyCartModel> cartproductlist;
 
+
+    private void updateUI(List<MyCartModel> cartProductList) {
+        cartAdapter = new CartAdapter(cart.this, 0, cartProductList);
+        cartAdapter.setOnDeleteButtonClickListener(new CartAdapter.OnDeleteButtonClickListener() {
+            @Override
+            public void onDeleteButtonClick(MyCartModel product) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(cart.this);
+                builder.setMessage("Bạn có muốn xóa sản phẩm này không?")
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                // tao retrofit
+                                Retrofit retrofit = new Retrofit.Builder()
+                                        .baseUrl(AppApi.BASE_URL)
+                                        .addConverterFactory(GsonConverterFactory.create())
+                                        .client(new OkHttpClient.Builder().build())
+                                        .build();
+
+
+                                CartAPI cartAPI = retrofit.create(CartAPI.class);
+
+                                Call<Void> call1 = cartAPI.deleteCartItem(product.getIdCart());
+                                call1.enqueue(new Callback<Void>() {
+                                    @Override
+                                    public void onResponse(Call<Void> call, Response<Void> response) {
+
+                                        for(int i = 0; i < cartProductList.size(); i++) {
+                                            if(cartProductList.get(i).getIdCart() == product.getIdCart()) {
+                                                cartProductList.remove(i);
+                                                break;
+                                            }
+                                        }
+                                        updateUI(cartProductList);
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call<Void> call, Throwable t) {
+
+                                    }
+                                });
+
+                            }
+                        })
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss(); // Đóng dialog nếu không muốn xóa
+                            }
+                        })
+                        .show();
+            }
+        });
+
+        cartAdapter.notifyDataSetChanged();
+        listViewcart.setAdapter(cartAdapter);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,11 +121,11 @@ public class cart extends AppCompatActivity {
 
 
         listViewcart = findViewById(R.id.listViewCart);
+        cartproductlist = new ArrayList<>();
 
-        // lay data tu SharedPerences
-//        updateCartProductListFromSharedPreferences();
+        //cartAdapter = new CartAdapter(cart.this, 0, cartproductlist);
 
-        // lay data cart tu api
+        // tao retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(AppApi.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -78,9 +137,10 @@ public class cart extends AppCompatActivity {
         Gson gson = new Gson();
         User user = gson.fromJson(userJson, User.class);
 
-        CartAPI categoryAPI = retrofit.create(CartAPI.class);
+        CartAPI cartAPI = retrofit.create(CartAPI.class);
 
-        Call<List<MyCartModel>> call = categoryAPI.getAllCartByUserId(user.getId());
+        Call<List<MyCartModel>> call = cartAPI.getAllCartByUserId(user.getId());
+
         call.enqueue(new Callback<List<MyCartModel>>() {
             @Override
             public void onResponse(Call<List<MyCartModel>> call, Response<List<MyCartModel>> response) {
@@ -88,9 +148,54 @@ public class cart extends AppCompatActivity {
                     List<MyCartModel> data = response.body();
                     cartproductlist = new ArrayList<>();
                     cartproductlist.addAll(data);
-                    cartAdapter = new CartAdapter(cart.this, 0, cartproductlist);
-                    listViewcart.setAdapter(cartAdapter);
 
+                    updateUI(cartproductlist);
+                   // cartAdapter = new CartAdapter(cart.this, 0, cartproductlist);
+
+//                    cartAdapter.setOnDeleteButtonClickListener(new CartAdapter.OnDeleteButtonClickListener() {
+//                            @Override
+//                            public void onDeleteButtonClick(MyCartModel product) {
+//                                AlertDialog.Builder builder = new AlertDialog.Builder(cart.this);
+//                                builder.setMessage("Bạn có muốn xóa sản phẩm này không?")
+//                                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
+//                                            @Override
+//                                            public void onClick(DialogInterface dialog, int which) {
+//
+//                                                Call<Void> call1 = cartAPI.deleteCartItem(product.getIdCart());
+//                                                call1.enqueue(new Callback<Void>() {
+//                                                    @Override
+//                                                    public void onResponse(Call<Void> call, Response<Void> response) {
+//
+//                                                        for(int i = 0; i < cartproductlist.size(); i++) {
+//                                                            if(cartproductlist.get(i).getIdCart() == product.getIdCart()) {
+//                                                                cartproductlist.remove(i);
+//                                                                break;
+//                                                            }
+//                                                        }
+//                                                        cartAdapter = new CartAdapter(cart.this, 0, cartproductlist);
+//                                                        cartAdapter.notifyDataSetChanged();
+//                                                        listViewcart.setAdapter(cartAdapter);
+//                                                    }
+//
+//                                                    @Override
+//                                                    public void onFailure(Call<Void> call, Throwable t) {
+//
+//                                                    }
+//                                                });
+//
+//                                            }
+//                                        })
+//                                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
+//                                            @Override
+//                                            public void onClick(DialogInterface dialog, int which) {
+//                                                dialog.dismiss(); // Đóng dialog nếu không muốn xóa
+//                                            }
+//                                        })
+//                                        .show();
+//                            }
+//                        });
+//                                    cartAdapter.notifyDataSetChanged();
+//                                    listViewcart.setAdapter(cartAdapter);
 
                 }else {
                     Log.e("API ERROR", "goi failed");
@@ -104,41 +209,6 @@ public class cart extends AppCompatActivity {
         });
 
 
-
-//        cartAdapter.setOnDeleteButtonClickListener(new CartAdapter.OnDeleteButtonClickListener() {
-//            @Override
-//            public void onDeleteButtonClick(MyCartModel product) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(cart.this);
-//                builder.setMessage("Bạn có muốn xóa sản phẩm này không?")
-//                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                // Xóa sản phẩm khỏi danh sách và cập nhật SharedPreferences
-//                                SharedPreferences sharedPreferences = getSharedPreferences("product_data", Context.MODE_PRIVATE);
-//                                Set<String> productSet = sharedPreferences.getStringSet("product_set", new HashSet<>());
-//
-//                                Gson gson = new Gson();
-//                                String productJson = gson.toJson(product);
-//                                productSet.remove(productJson);
-//
-//                                SharedPreferences.Editor editor = sharedPreferences.edit();
-//                                editor.putStringSet("product_set", productSet);
-//                                editor.apply();
-//
-//                                // Xóa sản phẩm khỏi danh sách hiển thị
-//                                cartproductlist.remove(product);
-//                                cartAdapter.notifyDataSetChanged();
-//                            }
-//                        })
-//                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                dialog.dismiss(); // Đóng dialog nếu không muốn xóa
-//                            }
-//                        })
-//                        .show();
-//            }
-//        });
 
 
 //        btn_buy_cart.setOnClickListener(v -> buyCheckedProducts());
